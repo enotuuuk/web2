@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <style>
+#main-aside-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#main-aside-wrapper a2, #main-aside-wrapper a1, #main-aside-wrapper a3,#main-aside-wrapper a4,#main-aside-wrapper a5,#main-aside-wrapper a6 {
+  background-color: #ffffff;
+  margin: 10px;
+  padding: 10px;
+}
+#main-aside-wrapper a1 {
+  flex: 3;
+  order: 1;
+  color: white;
+}
+#main-aside-wrapper a2 {
+  flex: 3;
+  order: 2;
+}
+#main-aside-wrapper a3 {
+  flex: 3;
+  order: 3;
+}
+#main-aside-wrapper a4 {
+flex: 3;
+order: 4;
+}
+
+#main-aside-wrapper a5 {
+flex: 3;
+order: 5;
+}
+@media screen and (min-width: 800px) and (orientation: landscape) {
+#main-aside-wrapper {
+flex-direction: row wrap;
+}
+#main-aside-wrapper a4{
+flex: 3;
+order: 5;
+}
+#main-aside-wrapper a5{
+flex: 3;
+order: 4;
+}
+} 
+#main-aside-wrapper a6 {
+  flex: 3;
+  order: 6;
+  color: white;
+}
+   </style>
+    <meta charset = "utf-8">
+    <title>task 3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+
+    <div id="main-aside-wrapper">
+    <a1><header>
+      <div class="title">web</div>
+    </header></a1> 
+    
+    <a2><nav class="menu">
+      <ul>
+        <li><a href="https://facebook.com" style="color: white">facebook</a></li>
+        <li><a href="https://vk.com" style="color: white">vk</a></li>
+        <li><a href="https://github.com" style="color: white">github</a></li>
+        <li><a href="https://wikipedia.com" style="color: white">wikipedia</a></li>
+      </ul>
+    </nav>   
+    </a2>
+    
+    <a3><div>
+      <ol>
+        <li> <a href="http://example.com/" style="color: black">абсолютная гиперссылка на главную страницу сайта</a></li>
+        <li> <a href="https://example.com/" style="color: black">абсолютная гиперссылка на главную сайта в протоколе https </a></li>
+        <li> <a href="ftp://moodle.kubsu.ru/mod/assign/view.php" style="color: black">ссылка на файл на сервере FTP без авторизации</a></li>
+        <li> <a href="ftp://user:password@moodle.kubsu.ru/mod/assign/view.php" style="color: black">ссылка на файл на сервере FTP с авторизацией</a></li>
+        <li> <a href="https://example.com#heel" style="color: black">ссылка на фрагмент страницы некоторого сайта</a> </li>
+        <li> <a href="#task6" style="color: black">ссылка на фрагмент текущей страницы</a>
+           <a id="task6"></a> </li>
+        <li> <a href="https://shop.com/catalog/smartphone?page=1&perpage=20" style="color: black">ссылка с двумя параметрами в URL</a></li>
+        <li>
+          <ul class="breadcrumb">
+            <li><a href="#" title="WEB" style="color: black"> 1 </a></li>
+            <li><a href="#" title="WEB1" style="color: black"> 2 </a></li>
+            <li><a href="#" title="WEB2" style="color: black"> 3 </a></li>
+            <li>список ссылок основной навигации сайта с подписями title</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a>ссылка без href</a></li>
+            <li><a href="#" style="color: black">1</a></li>
+            <li><a href="#" style="color: black">2</a></li>
+          </ul>
+        </li>
+        <li><a href="#!" style="color: black">ссылка с пустым href</a></li>
+        <li><a href="https://example.com/" rel="nofollow" style="color: black">ссылка, по которой запрещен переход поисковикам</a></li>
+        <li><a href="https://example.com/" style="color: black"><!--noindex-->ссылка запрещенная для индексации поисковиками<!--/noindex--></a></li>
+        <li><a href="#!" style="color: black">windows 10</a></li>
+        <li><a href="#" target="_blank"><img src="pic1.jpg" alt="task14" /></a></li>
+        <li style="text-align: center;"><img src="pic2.png" usemap="#box" alt="task15">
+          <map name="box">
+            <area shape="rect" coords="0,0,75,75" href="#" title="1" alt="1">
+            <area shape="rect" coords="0,75,75,150" href="#" title="2" alt="1">
+            <area shape="rect" coords="75,0,150,75" href="#" title="3" alt="1">
+            <area shape="rect" coords="75,75,150,150" href="#" title="4" alt="1">
+          </map>
+        </li>
+        <li><a href="pic2.png" style="color: black">относительная на страницу в текущем каталоге</a>
+        <li><a href="about/pic2.png" style="color: black">относительная на страницу в каталоге about</a></li>
+        <li><a href="../pic1.jpg" style="color: black">относительная на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../something.html" style="color: black">относительная на страницу в каталоге двумя уровнями выше</a></li>
+        <li><a href="/" style="color: black">сокращенная на главную</a></li>
+        <li><a href="/about" style="color: black">сокращенная ссылка на внутреннюю</a></li>
+      </ol>
+    </div>
+    </a3>
+  
+    <a4><table style="margin-left:100px">
+      <tr><th>Столбец 1</th><th>Столбец 2</th><th>Столбец 3</th></tr>
+      <tr><td>Ячейка 11</td><td>Ячейка 12</td><td>Ячейка 13</td></tr>
+      <tr><td>Ячейка 21</td><td>Ячейка 22</td><td>Ячейка 23</td></tr>
+      <tr><td>Ячейка 31</td><td>Ячейка 32</td><td>Ячейка 33</td></tr>
+      <tr><td>Ячейка 41</td><td>Ячейка 42</td><td>Ячейка 43</td></tr>
+      <tr><td>Ячейка 51</td><td>Ячейка 52</td><td>Ячейка 53</td></tr>
+    </table>
+    </a4>     
+        
+    <a5><h3 style="margin-left:100px">Форма</h3>
+    
+    <form action="/" method="POST" style="margin-left:100px">
+
+      <label>
+      Имя<br>
+      <input value="Иван" />
+      </label><br>
+
+      <label>
+      e-mail<br>
+      <input value="email@inbox.ru"
+        type="email">
+      </label><br>
+
+      <label>
+      Дата рождения<br>
+      <input value="гггг-мм-дд"
+        type="date">
+      </label><br>
+
+     Пол<br>
+      <label><input type="radio" name="radio-group-1">
+      Муж</label>
+      <label><input type="radio" name="radio-group-1">
+      Жен</label><br />
+
+    Количество конечностей<br>
+      <label><input type="radio" name="radio-group-2">
+      1</label><br>
+      <label><input type="radio" name="radio-group-2">
+      2</label><br>
+      <label><input type="radio" name="radio-group-2">
+      3</label><br>
+      <label><input type="radio" name="radio-group-2">
+      4</label><br>
+      <label>
+
+    Cверхспособности:<br>
+      <select name="field-name-3">
+       <option value="Значение1">Бессмертие</option>
+       <option value="Значение2">Прохождение сквозь стены</option>
+       <option value="Значение3">Левитация </option>
+      </select>
+      </label><br>
+
+      <label>
+      Биография<br/>
+      <textarea></textarea>
+      </label><br>
+
+      <label><input type="checkbox">C контрактом ознакомлен
+      </label><br>
+      
+      <input type="submit" value="Отправить" />
+    </form>
+    </a5>
+    <a6><footer>
+      <p class="f" style="margin-left:100px">© Ivan Pozdnyakov 2021</p>
+    </footer>
+</a6>
+    </div>
+  </body>
+</html>
